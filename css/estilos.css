@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap');
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    background-color: #27274d;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 2.3em;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+h3{
+    margin: 15px 0;
+}
+
+label{
+   margin: 20px 0 5px 0;
+}
+
+nav {
+    padding: 10px;
+}
+
+header {
+    /* height: 10vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c49ee3;
+    padding: 15px;
+}
+
+main {
+    /* height: 90vh; */
+    position: relative;
+    background-color: #e0d2f0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+}
+
+aside {
+    width: 275px;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #d7b6f2;
+    transition: all 0.5s;
+    transform: translateX(0);
+}
+aside.cerrado {
+    transform: translateX(100%);
+}
+
+.btnAsideClose {
+    position: absolute;
+    right: 10%;
+    font-size: 1.3rem;
+    width: 10%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 0 15px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.25s;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color:#b67ae7
+}
+
+.btn_cont{
+    padding: 10px 12px;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius:10px;
+}
+
+.conj_btn{
+    margin-bottom:20px;
+}
+
+i{
+    margin-right: 7px;
+}
+
+#contenedor {
+    display: flex;
+    width: 100%;
+}
+
+#contGeneral {
+    width: 100%;
+}
+
+.contFlex{
+    display: flex;
+    /* margin: 20px 0; */
+}
+
+.contText{
+    margin-bottom: 15px;
+}
+.justCenter{
+    justify-content: center;
+}
+
+.justBet{
+    justify-content: space-between;
+}
+
+.alignEnd{
+    align-items: flex-end;
+}
+
+.bas{
+    align-items:baseline;
+}
+
+.flexCol{
+    flex-direction: column;
+}
+
+select{
+    height:32px;
+    padding: 7px;
+}
+
+#url{
+    height:32px;
+}
+
+.inputFileContainer {
+    margin-top: 15px;
+}
+.inputFileContainer h5 {
+    padding: 0;
+    visibility: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.inputFileContainer input{
+    display: none;
+}
+.inputFileContainer label {
+    text-align: center;
+    color: #101124;
+    display: block;
+    padding: 5px 21px;
+    height: 32px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 15px;
+}
+.inputFileContainer #quitarFileIMGLabel {
+    display: none;
+}
+
+#fuente{
+    height:36px;
+}
+.tamanioText div{
+    width:50%;
+    margin-left: 10px;
+}
+
+.tamanioText button {
+    padding:7px 7px;
+}
+
+.tamanioText input, .tamanioText button{
+    height:36px;
+}
+
+.fondo{
+    margin-bottom: 40px;
+}
+
+.fondo label, .url label{
+    margin-bottom: 15px;
+}
+
+input{
+    border-radius:5px;
+}
+
+input[type="color"]{
+    width: 100px;
+    height: 34px;
+    border: none;
+    border-radius:5px;
+}
+
+input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+input[type="number"]{
+    width: 50%;
+    padding: 7px;
+}
+
+#espaciado{
+    width:100%;
+    height:36px;
+    margin-top: 15px;
+}
+
+textarea{
+    height:36px;
+    margin-top: 15px;
+    padding: 7px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#fuente{
+    margin: 15px 0;
+}
+
+#interlineado{
+    margin: 15px 0;
+    height: 36px;
+}
+
+/* Acá está el problema a resolver */
+/* input[type='range']::-webkit-slider-runnable-track, */
+/* input[type='range']::-webkit-slider-thumb { */
+
+    /* -webkit-appearance: none; */
+/* } */
+/* input[type=range]:focus { */
+    /* outline: none; */
+    /*Elimina el borde azul. Se debería dar estilo de enfoque por razones de accesibilidad */
+/* } */
+/* input[type='range'] { */
+    /* -webkit-appearance: none; */
+    /* background: red; */
+        /* quitamos estilos es moz y webkit lo ponemios transparente */
+
+        /* width: 100%; */
+    /* En firefox es requerido poner el ancho */
+/* } */
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4d50a2;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #b8bafa;
+    outline: none;
+    cursor: pointer;
+}
+/* Sección de Texto */
+
+#texto {
+    display: none;
+}
+
+/* Sección MEME */
+
+#memeImg{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#meme{
+    display: flex;
+    width: 100%;
+    max-width: 615px;
+    height: 615px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.textoMeme{
+    width: 100%;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    color: #101124;
+    background-color: white;
+    position:static;
+    padding: 35px 50px;
+}
+
+.btn_secundary{
+    margin-top:30px;
+    padding: 10px 20px;
+    background-color: #c49ee3;
+    border-radius: 10px;
+    font-size:1.3em;
+    border: none;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.25s;
+}
+.btn_secundary:hover {
+    cursor:pointer;
+    background-color: #b67ae7 !important;
+}
+
+/* Botón restablecer de la sección imagen */
+
+.restablecer{
+    font-size:14px;
+}
+
+/* Clases Específicas del Modo Oscuro */
+
+
+.modoOscuro {
+    color: #c8c2f2;
+}
+
+.modoOscuro header{
+    background-color: #101124;
+}
+
+.modoOscuro main{
+    background-color: #27274d;
+}
+
+.modoOscuro aside {
+    background-color: #181a42;
+}
+
+.modoOscuro .btn{
+    color: #c8c2f2
+}
+.modoOscuro .btn:hover{
+    color: #101124;
+    background-color: white;
+}
+
+.modoOscuro .btn_secundary, .modoOscuro .btn_cont{
+    background-color: #c8c2f2;
+}
+.modoOscuro .btn_secundary:hover {
+    background-color: white !important;
+}
+
+
+/* Imagen con firma */
+
+.firma{
+    position: absolute;
+    bottom: 15px;
+    right:15px;
+    width: 200px;
+}
+
+/******************** Media Query Pantalla Grandes ********************/
+@media only screen and (min-width: 961px) {
+    .btnAsideClose {
+        display: none;
+    }
+}
+/******************** Media Query Tablet ********************/
+@media only screen and (min-width:481px) and (max-width: 960px){
+    main {
+        padding: 20px;
+    }
+    aside {
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-y: auto;
+        height: 100%;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    nav {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+    .btn {
+        margin: 0 5px;
+        font-size: 1rem;
+    }
+    .btn_secundary {
+        margin-top: 15px;
+    }
+    .textoMeme {
+        padding: 15px 15px;
+        font-size: 1.5rem;
+    }
+    #meme {
+        height: 516px;
+    }
+    .firma {
+        position: initial;
+        margin-top: 1rem;
+    }
+}
+
+/******************** Media Query Mobile ********************/
+@media only screen and (min-width:0px) and (max-width: 480px){
+    main {
+        padding: 20px;
+    }
+    aside {
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav {
+        padding: 0;
+        margin-top: 0.5rem;
+    }
+    .btn {
+        margin: 0 5px;
+        font-size: 0.8rem;
+    }
+    .btn_secundary {
+        margin-top: 10px;
+    }
+    .textoMeme {
+        padding: 15px 15px;
+        font-size: 1.5rem;
+    }
+    #meme {
+        height: 516px;
+    }
+    .firma {
+        position: initial;
+        margin-top: 1rem;
+    }
+}
